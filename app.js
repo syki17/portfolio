@@ -25,6 +25,7 @@ app.use('/', indexRouter);
 app.use('/contact-me', require('./routes/contact'));
 app.use('/projects',require('./routes/projects'));
 app.use('/services', require('./routes/services'));
+app.use('/about-me', require('./routes/about'));
 
 
 // catch 404 and forward to error handler
