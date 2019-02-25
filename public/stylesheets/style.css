@@ -1,8 +1,21 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.card{
+  float:left; 
+  border-style:solid; 
+  margin:10px;
+  height: 250px;
+}
+.csharp{
+  clear:left;
 }
 
 a {
   color: #00B7FF;
+}
+.card.body{
+  display:flex;
+  flex-direction: column;
 }

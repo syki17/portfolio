@@ -1,6 +1,42 @@
+//- Author: Jakub
+    FileName: services.pub
+    WebsiteName: Jakub's Portfolio
+    File Description: Create cards of my services
 extends layout
 
 block content
-  h1= title
-  p  #{title}
+  .container.frameworks
+    br
+    p A list of languages that I have used and have experience with:
+      h2 Java
+      p Below is a list of frameworks that I have worked with in Java
+
+        for javaFramework in java
+          .card(style='width: 18rem;')
+            img.card-img-top
+            .card-body
+              h5.card-title #{javaFramework.title}
+              p.card-text
+                | #{javaFramework.desc}
+              a.mt-auto.btn.btn-block.btn-outline-primary(href=`${javaFramework.link}`,target='_blank') Visit Framework
+          
+
+  .container.csharp
+    h2 C#
+    p Below is a list of frameworks that I have worked with in C#
+      for cSharpFramework in cSharp
+        .card(style='width: 18rem;')
+          img.card-img-top
+          .card-body
+            h5.card-title #{cSharpFramework.title}
+            p.card-text
+              | #{cSharpFramework.desc}
+            a.mt-auto.btn.btn-block.btn-outline-primary(href=`${cSharpFramework.link}`.target='_blank') Visit Framework
+
+   
+    
+
+      
+
+  
 

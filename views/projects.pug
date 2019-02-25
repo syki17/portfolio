@@ -1,6 +1,21 @@
+//- Author: Jakub
+    FileName: projects.pub
+    WebsiteName: Jakub's Portfolio
+    File Description: Dynamically create cards based on the number of public repos available.
 extends layout
 
 block content
-  h1= title
-  p  #{title}
+  div.container
+    h2 Projects
+    p Some projects that I have worked on or am currently working on:
 
+      - for(var i=0; i< link.length ; i++)
+        .card(style='width: 18rem;')
+          img.card-img-top
+          .card-body
+            h5.card-title #{titles[i]}
+            p.card-text 
+              | #{description[i]}
+          a.mt-auto.btn.btn-block.btn-outline-primary(href=`${link[i]}`, target='_blank') See Project Github
+     
+    

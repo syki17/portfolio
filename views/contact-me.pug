@@ -1,5 +1,12 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div.container
+      form
+        .form-group
+          label(for='exampleInputEmail1') Email address
+          input#exampleInputEmail1.form-control(type='email', aria-describedby='emailHelp', placeholder='Enter email')
+        .form-group
+          label(for='exampleInputPassword1') Phone Number
+          input#exampleInputPassword1.form-control(type='text', placeholder='Phone Number')
+        button.btn.btn-primary(type='submit') Submit
