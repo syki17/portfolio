@@ -4,13 +4,13 @@ and send to front end.
 */
 var express = require('express');
 var router = express.Router();
-var https = require('https');
 const fetch = require('node-fetch');
 
 // initialize empty arrays
 var links = [];
 var desc = [];
 var title = [];
+var lang = [];
 
 /* GET Projects page. */
 router.get('/', function(req, res, next) {
@@ -25,13 +25,14 @@ router.get('/', function(req, res, next) {
         links.push(body[i].html_url)
         desc.push(body[i].description)
         title.push(body[i].name);
-        
+        lang.push(body[i].language)
 
       }
       res.render('projects', {
         link: links,
         description: desc,
-        titles: title
+        titles: title,
+        language: lang
       });
       console.log(links);
     })
@@ -44,6 +45,7 @@ router.get('/', function(req, res, next) {
   links =[];
   desc =[];
   title =[];
+  lang =[];
 });
 
 module.exports = router;

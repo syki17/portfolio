@@ -13,9 +13,11 @@ block content
         .card(style='width: 18rem;')
           img.card-img-top
           .card-body
-            h5.card-title #{titles[i]}
+            h5.card-title.alert.alert-secondary #{titles[i]}
             p.card-text 
               | #{description[i]}
+              |
+              p Language: #{language[i]}
           a.mt-auto.btn.btn-block.btn-outline-primary(href=`${link[i]}`, target='_blank') See Project Github
      
     
